@@ -1,19 +1,21 @@
 import React from "react";
+import Card from "./components/Card";
+import Column from "./components/Column";
 
-
-
-function App() {
+const App: React.FC = () => {
   return (
     <div className='flex flex-row w-full h-full p-5 items-start bg-blue-400'>
-      <div className='bg-gray-200 w-80 m-5 p-2 flex-grow'>
-        <div className='bg-white cursor-pointer mb-2 py-2 px-4 max-w-xs rounded shadow-md'>
-          <h1 className='p-3 text-xl font-bold font-serif tracking-wider text-center'>
-            Hello World
-          </h1>
-        </div>
-      </div>
+      <Column text='To Do'>
+        <Card text='Generate app Scaffold' />
+      </Column>
+      <Column text='In Progress'>
+        <Card text='Learn React and TypeScript' />
+      </Column>
+      <Column text='Done'>
+        <Card text='Begin to use static typing' />
+      </Column>
     </div>
   );
-}
+};
 
 export default App;
