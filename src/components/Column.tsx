@@ -1,12 +1,9 @@
 import React from "react";
+import { AddNewItem } from "./AddNewItem";
 
 interface ColumnProps {
   text: String;
 }
-
-//      type React.PropsWithChildren<P> = P & {
-//        children?: React.ReactNode;
-//        }
 
 const Column = ({ text, children }: React.PropsWithChildren<ColumnProps>) => {
   return (
@@ -15,6 +12,12 @@ const Column = ({ text, children }: React.PropsWithChildren<ColumnProps>) => {
         {text}
       </h1>
       {children}
+
+      <AddNewItem
+        toggleButtonText='Add Another Task'
+        onAdd={console.log}
+        dark
+      />
     </div>
   );
 };
